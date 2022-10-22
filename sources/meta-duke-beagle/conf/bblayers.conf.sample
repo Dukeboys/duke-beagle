@@ -1,0 +1,14 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  ${TOPDIR}/../sources/meta \
+  ${TOPDIR}/../sources/meta-poky \
+  ${TOPDIR}/../sources/meta-yocto-bsp \
+  ${TOPDIR}/../sources/meta-opemembedded \
+  ${TOPDIR}/../sources/meta-duke-beagle \
+  "
