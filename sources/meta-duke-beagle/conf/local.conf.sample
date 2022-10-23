@@ -22,7 +22,7 @@ MACHINE ?= "beaglebone-yocto"
 # Ultimately when creating custom policy, people will likely end up subclassing 
 # these defaults.
 #
-DISTRO = "poky-tiny"
+DISTRO = "duke-tiny"
 
 #
 # Package Management configuration

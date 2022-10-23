@@ -6,9 +6,8 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ${TOPDIR}/../sources/meta \
-  ${TOPDIR}/../sources/meta-poky \
-  ${TOPDIR}/../sources/meta-yocto-bsp \
-  ${TOPDIR}/../sources/meta-opemembedded \
+  ${TOPDIR}/../sources/poky/meta \
+  ${TOPDIR}/../sources/poky/meta-poky \
+  ${TOPDIR}/../sources/poky/meta-yocto-bsp \
   ${TOPDIR}/../sources/meta-duke-beagle \
   "

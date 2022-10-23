@@ -6,6 +6,8 @@
 ###############################################################################
 
 SHELL = /bin/bash
+PRINT = echo
+.ONESHELL:
 
 ###############################################################################
 # Build configuration variables
@@ -14,7 +16,7 @@ BOOTLOADER=virtual/bootloader
 KERNEL=virtual/kernel
 ROOTFS=core-image-minimal
 
-SETUP_BUILDTOOLS=TEMPLATECONF=sources/meta-duke-beagle/conf . sources/poky/oe-init-build-env
+SETUP_BUILDTOOLS=TEMPLATECONF=../sources/meta-duke-beagle/conf . sources/poky/oe-init-build-env
 RUN_BUILD=bitbake
 
 ###############################################################################
@@ -24,7 +26,7 @@ all: bootloader kernel rootfs
 
 .PHONY : bootloader
 bootloader:
-	${PRINT} "Building kernel..."
+	${PRINT} "Building bootloader..."
 	${SETUP_BUILDTOOLS}
 	${RUN_BUILD} ${BOOTLOADER}
 
