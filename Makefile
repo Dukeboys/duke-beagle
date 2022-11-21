@@ -23,7 +23,10 @@ RUN_BUILD=bitbake
 ###############################################################################
 # Core make targets
 ###############################################################################
-all: bootloader kernel rootfs toolchain
+all: image toolchain
+
+.PHONY : image
+image: bootloader kernel rootfs
 
 .PHONY : bootloader
 bootloader:
