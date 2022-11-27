@@ -22,7 +22,7 @@ MACHINE ?= "beaglebone-yocto"
 # Ultimately when creating custom policy, people will likely end up subclassing 
 # these defaults.
 #
-DISTRO = "duke-tiny"
+DISTRO = "duke"
 
 #
 # Package Management configuration
@@ -125,6 +125,10 @@ BB_DISKMON_DIRS ??= "\
 #
 BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
 SSTATE_MIRRORS ?= "file://.* http://sstate.yoctoproject.org/all/PATH;downloadfilename=PATH"
+
+##
+# Disable non-existent and old aliased tty's
+SERIAL_CONSOLES = "115200;ttyS0"
 
 # CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
 # track the version of this file when it was generated. This can safely be ignored if
